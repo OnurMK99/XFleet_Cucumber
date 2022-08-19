@@ -118,6 +118,31 @@ public class BrowserUtils {
 
         return salesManagers;
     }
+
+    public static String password() {
+        String path = "credentials.xlsx";
+        String password = "";
+
+
+        try {
+            FileInputStream file = new FileInputStream(path);
+
+            XSSFWorkbook workbook = new XSSFWorkbook(file);
+
+            XSSFSheet sheet = workbook.getSheet("data");
+
+            password = sheet.getRow(1).getCell(3).toString();
+
+        } catch (Exception e) {
+
+        }
+        return password;
+
+    }
+
+
+
+
     }
 
 

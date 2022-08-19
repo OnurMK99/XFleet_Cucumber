@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         plugin = {
-                "pretty",
+                //"pretty",
                 "html:target/reports/cucumber-report.html",
                 "json:target/reports/cucumber-report.json",
                 "rerun:target/reports/cucumber-report.txt",
@@ -18,7 +18,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",// content root
         glue = "com/xfleet/step_definitions", // source root
         dryRun= false,
-        tags= "",
+        tags= "@FLTAPS-1812",
         publish = false
 
 
