@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: User logs out the website
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 232.958 s - in User logs out the website

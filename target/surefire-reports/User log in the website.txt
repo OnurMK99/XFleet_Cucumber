@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: User log in the website
+-------------------------------------------------------------------------------
+Tests run: 22, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 664.348 s - in User log in the website

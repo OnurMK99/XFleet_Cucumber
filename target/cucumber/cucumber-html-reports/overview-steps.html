@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>No Name (add projectName to cucumber-reporting.properties)</td>
+      <td>08 Tem 2022, 18:25</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">com.xfleet.step_definitions.Hooks.teardown(io.cucumber.java.Scenario)</td>
+              <td>3</td>
+              <td class="duration" data-value="1699373466">1.699</td>
+              <td class="duration" data-value="1699373466">2.103</td>
+              <td class="duration" data-value="5098120400">5.098</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.xfleet.step_definitions.LogOutAC1.userIsOnTitlePage()</td>
+              <td>3</td>
+              <td class="duration" data-value="15415736300">15.415</td>
+              <td class="duration" data-value="15415736300">15.478</td>
+              <td class="duration" data-value="46247208900">46.247</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.xfleet.step_definitions.LogOutAC1.user_clicks_logout_button_in_the_dropdown_menu()</td>
+              <td>3</td>
+              <td class="duration" data-value="2949925333">2.949</td>
+              <td class="duration" data-value="2949925333">3.397</td>
+              <td class="duration" data-value="8849776000">8.849</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.xfleet.step_definitions.LogOutAC1.user_clicks_logout_dropdown_menu()</td>
+              <td>3</td>
+              <td class="duration" data-value="15487790866">15.487</td>
+              <td class="duration" data-value="15487790866">15.517</td>
+              <td class="duration" data-value="46463372600">46.463</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.xfleet.step_definitions.LogOutAC1.user_sees_login_page()</td>
+              <td>3</td>
+              <td class="duration" data-value="302060700">0.302</td>
+              <td class="duration" data-value="302060700">0.410</td>
+              <td class="duration" data-value="906182100">0.906</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.xfleet.step_definitions.LogOutAC2.userCannotSeeHomepageTitle()</td>
+              <td>3</td>
+              <td class="duration" data-value="250648133">0.250</td>
+              <td class="duration" data-value="250648133">0.303</td>
+              <td class="duration" data-value="751944400">0.751</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.xfleet.step_definitions.LogOutAC2.user_clicks_the_stepback_button()</td>
+              <td>3</td>
+              <td class="duration" data-value="1183905666">1.183</td>
+              <td class="duration" data-value="1183905666">2.015</td>
+              <td class="duration" data-value="3551717000">3.551</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.xfleet.step_definitions.LoginAC1.user_clicks_the_login_button()</td>
+              <td>3</td>
+              <td class="duration" data-value="30999376833">30.999</td>
+              <td class="duration" data-value="30999376833">35.864</td>
+              <td class="duration" data-value="92998130500">1:32.998</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.xfleet.step_definitions.LoginAC1.user_enters_password(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="522087766">0.522</td>
+              <td class="duration" data-value="522087766">0.674</td>
+              <td class="duration" data-value="1566263300">1.566</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.xfleet.step_definitions.LoginAC1.user_enters_username(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="439184366">0.439</td>
+              <td class="duration" data-value="439184366">0.563</td>
+              <td class="duration" data-value="1317553100">1.317</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.xfleet.step_definitions.LoginAC1.user_is_on_x_fleet_login_page()</td>
+              <td>3</td>
+              <td class="duration" data-value="8229510266">8.229</td>
+              <td class="duration" data-value="8229510266">10.972</td>
+              <td class="duration" data-value="24688530800">24.688</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>11</td>
+            <td>33</td>
+            <td class="duration">7.043</td>
+            <td class="duration">1:32.998</td>
+            <td class="duration">3:52.438</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
